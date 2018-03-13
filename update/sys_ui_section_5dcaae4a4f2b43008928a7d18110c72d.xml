@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="Activity Details" section_id="5dcaae4a4f2b43008928a7d18110c72d" sys_domain="global" table="x_26578_ifttt_strava_activity" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>elevation_gain_m</element>
+            <position>0</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>083cae8a4f2b43008928a7d18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>elevation_gain_ft</element>
+            <position>1</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>883cae8a4f2b43008928a7d18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>average_speed_km</element>
+            <position>2</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>0c3cae8a4f2b43008928a7d18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>average_speed_mi</element>
+            <position>3</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>8c3cae8a4f2b43008928a7d18110c78e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_speed_km</element>
+            <position>4</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>003cae8a4f2b43008928a7d18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_speed_mi</element>
+            <position>5</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>803cae8a4f2b43008928a7d18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>043cae8a4f2b43008928a7d18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>average_cadance</element>
+            <position>7</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>843cae8a4f2b43008928a7d18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>average_watts</element>
+            <position>8</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>083cae8a4f2b43008928a7d18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>weighted_avg_watts</element>
+            <position>9</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>883cae8a4f2b43008928a7d18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_watts</element>
+            <position>10</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:33:45</sys_created_on>
+            <sys_id>0c3cae8a4f2b43008928a7d18110c78f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:33:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Activity Details</caption>
+            <header>false</header>
+            <name>x_26578_ifttt_strava_activity</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:27:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5dcaae4a4f2b43008928a7d18110c72d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Activity Details</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="IFTTT" source="x_26578_ifttt">f060168a4fe743008928a7d18110c77f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="IFTTT">f060168a4fe743008928a7d18110c77f</sys_scope>
+            <sys_update_name>sys_ui_section_5dcaae4a4f2b43008928a7d18110c72d</sys_update_name>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:27:34</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

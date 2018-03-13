@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>page</name>
+        <rest_message_function display_value="Get Activities">aafd9e424f2b43008928a7d18110c742</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>madeleonardis</sys_created_by>
+        <sys_created_on>2018-01-10 18:32:49</sys_created_on>
+        <sys_id>ef3e52424f2b43008928a7d18110c741</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>page</sys_name>
+        <sys_package display_value="IFTTT" source="x_26578_ifttt">f060168a4fe743008928a7d18110c77f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IFTTT">f060168a4fe743008928a7d18110c77f</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_ef3e52424f2b43008928a7d18110c741</sys_update_name>
+        <sys_updated_by>madeleonardis</sys_updated_by>
+        <sys_updated_on>2018-03-06 14:44:23</sys_updated_on>
+        <type>string</type>
+        <value>1</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

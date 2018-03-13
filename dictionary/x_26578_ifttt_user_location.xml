@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="User Location" max_length="40" name="x_26578_ifttt_user_location" type="collection">
+        <element label="Latitude" max_length="40" name="latitude" type="float"/>
+        <element label="Longitude" max_length="40" name="longitude" type="float"/>
+        <element label="Map URL" max_length="1024" name="map_url" type="url"/>
+        <element label="User (string)" max_length="40" name="user_string" type="string"/>
+    </element>
+</database>

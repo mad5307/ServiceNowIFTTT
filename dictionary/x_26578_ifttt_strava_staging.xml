@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_26578_ifttt_staging" label="Strava Staging" max_length="40" name="x_26578_ifttt_strava_staging" type="collection"/>
+</database>

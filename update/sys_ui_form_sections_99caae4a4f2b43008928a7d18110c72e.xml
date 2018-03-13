@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="99caae4a4f2b43008928a7d18110c72e" sys_domain="global" table="x_26578_ifttt_strava_activity" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:27:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5dcaae4a4f2b43008928a7d18110c730</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_26578_ifttt_strava_activity" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">99caae4a4f2b43008928a7d18110c72e</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">e4a9ae0a4f2b43008928a7d18110c7b1</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:27:34</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:27:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>19caae4a4f2b43008928a7d18110c731</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_26578_ifttt_strava_activity" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">99caae4a4f2b43008928a7d18110c72e</sys_ui_form>
+            <sys_ui_section caption="Activity Details" display_value="Activity Details" name="x_26578_ifttt_strava_activity" sys_domain="global" view="Default view">5dcaae4a4f2b43008928a7d18110c72d</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:27:34</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_26578_ifttt_strava_activity</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-10 19:27:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>99caae4a4f2b43008928a7d18110c72e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_26578_ifttt_strava_activity</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="IFTTT" source="x_26578_ifttt">f060168a4fe743008928a7d18110c77f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="IFTTT">f060168a4fe743008928a7d18110c77f</sys_scope>
+            <sys_update_name>sys_ui_form_sections_99caae4a4f2b43008928a7d18110c72e</sys_update_name>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-10 19:27:34</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="c8e3b7a04fb303008928a7d18110c765" sys_domain="global" table="x_26578_ifttt_user_location" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-18 19:11:46</sys_created_on>
+            <sys_id>04e3fb2c4fb303008928a7d18110c776</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26578_ifttt_user_location" sys_domain="global" view="Default view">c8e3b7a04fb303008928a7d18110c765</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-18 19:11:46</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>latitude</element>
+            <position>1</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-18 19:11:46</sys_created_on>
+            <sys_id>0ce3fb2c4fb303008928a7d18110c776</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26578_ifttt_user_location" sys_domain="global" view="Default view">c8e3b7a04fb303008928a7d18110c765</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-18 19:11:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-18 19:11:46</sys_created_on>
+            <sys_id>8ce3fb2c4fb303008928a7d18110c776</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26578_ifttt_user_location" sys_domain="global" view="Default view">c8e3b7a04fb303008928a7d18110c765</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-18 19:11:46</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>longitude</element>
+            <position>3</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-18 19:11:46</sys_created_on>
+            <sys_id>00e3fb2c4fb303008928a7d18110c777</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26578_ifttt_user_location" sys_domain="global" view="Default view">c8e3b7a04fb303008928a7d18110c765</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-18 19:11:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>4</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-18 19:11:46</sys_created_on>
+            <sys_id>80e3fb2c4fb303008928a7d18110c777</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26578_ifttt_user_location" sys_domain="global" view="Default view">c8e3b7a04fb303008928a7d18110c765</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-18 19:11:46</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>map_url</element>
+            <position>5</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-18 19:11:46</sys_created_on>
+            <sys_id>04e3fb2c4fb303008928a7d18110c777</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26578_ifttt_user_location" sys_domain="global" view="Default view">c8e3b7a04fb303008928a7d18110c765</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-18 19:11:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user_string</element>
+            <position>6</position>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-18 19:11:46</sys_created_on>
+            <sys_id>84e3fb2c4fb303008928a7d18110c777</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_26578_ifttt_user_location" sys_domain="global" view="Default view">c8e3b7a04fb303008928a7d18110c765</sys_ui_section>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-18 19:11:46</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_26578_ifttt_user_location</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>madeleonardis</sys_created_by>
+            <sys_created_on>2018-01-18 19:11:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c8e3b7a04fb303008928a7d18110c765</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_26578_ifttt_user_location</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="IFTTT" source="x_26578_ifttt">f060168a4fe743008928a7d18110c77f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="IFTTT">f060168a4fe743008928a7d18110c77f</sys_scope>
+            <sys_update_name>sys_ui_section_c8e3b7a04fb303008928a7d18110c765</sys_update_name>
+            <sys_updated_by>madeleonardis</sys_updated_by>
+            <sys_updated_on>2018-01-18 19:11:46</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

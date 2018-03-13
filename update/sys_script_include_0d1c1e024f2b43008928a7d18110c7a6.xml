@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_26578_ifttt.stravaUtil</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>stravaUtil</name>
+        <script><![CDATA[var stravaUtil = Class.create();
+stravaUtil.prototype = {
+	initialize: function() {
+	},
+
+	getAthlete: function() {
+		try { 
+			var r = new sn_ws.RESTMessageV2('x_26578_ifttt.Strava API', 'Get Athlete');
+
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			var strResponse = JSON.stringify(response);
+
+			return responseBody;
+		}
+		catch(ex) {
+			var message = ex.getMessage();
+			gs.info(message);
+		}
+	},
+
+	getActivities: function(page,count) {
+		try { 
+			var r = new sn_ws.RESTMessageV2('x_26578_ifttt.Strava API', 'Get Activities');
+			r.setRequestHeader('access_token','28a9b9edda57dfd767e067471f0faac475fd8448');
+			r.setStringParameterNoEscape('page', page);
+			r.setStringParameterNoEscape('per_page', count);
+
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			var strResponse = JSON.stringify(response);
+
+			return responseBody;
+		}
+		catch(ex) {
+			var message = ex.getMessage();
+			gs.debug(message);
+		}
+	},
+
+	getActivity: function(activity_id){
+		gs.info("Getting activity info for "+activity_id);
+		try { 
+			var r = new sn_ws.RESTMessageV2('x_26578_ifttt.Strava API', 'Get Activity');
+			r.setRequestHeader('access_token','28a9b9edda57dfd767e067471f0faac475fd8448');
+			r.setStringParameterNoEscape('activity_id', activity_id);
+
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var httpStatus = response.getStatusCode();
+			
+			return responseBody;
+		}
+		catch(ex) {
+			var message = ex.getMessage();
+			gs.info("***ERROR - GET ACTIVITY : "+message);
+		}
+	},
+
+	updateActivities: function(){
+		var page = 10;
+
+		while(page != 0){
+			this._getStravaActivities(page);
+			page--;
+		}
+
+		this._clearStaging();
+	},
+
+	_getStravaActivities: function(page){
+
+		var r = this.getActivities(page,200);
+		var athlete = {};
+		var obj = JSON.parse(r);
+		
+		if(obj !='' && !obj.message)
+			athlete = obj[0].athlete.id;
+		else
+			return;
+
+		var usr = new GlideRecord('x_26578_ifttt_strava_athlete');
+		usr.addQuery('correlation_id',athlete);
+		usr.query();
+		if(usr.next()){
+			athlete = usr.sys_id;
+		}else{
+
+		}
+		var types = [];
+		var details = {};
+
+		for(var i = obj.length-1; i>=0; i--){
+			var entry = {};
+			entry = obj[i];
+
+			var stg = new GlideRecord('x_26578_ifttt_strava_staging');
+			stg.initialize();
+			stg.correlation_id = entry.id;
+			stg.data = JSON.stringify(entry);
+			stg.insert();
+
+			var date = entry.start_date.replace('Z','').replace('T',' ');
+			var startGDT = new GlideDateTime(date);
+			if(i == 1){
+				
+			}
+
+			var act = new GlideRecord('x_26578_ifttt_strava_activity');
+			act.addQuery('correlation_id', entry.id);
+			act.query();
+			if(act.next()){
+				act.correlation_id       = entry.id;
+				act.name                 = entry.name;
+				act.activity_date        = startGDT;
+				act.athlete              = athlete;
+				act.type                 = entry.type;
+				act.distance_km          = parseFloat(entry.distance)/1000;
+				act.distance_mi          = (parseFloat(entry.distance)/1000)*0.621371;
+				act.average_speed_km     = parseFloat(entry.average_speed)*3.6;
+				act.average_speed_mi     = parseFloat(entry.average_speed)*2.23694;
+				act.max_speed_km         = parseFloat(entry.max_speed)*3.6;
+				act.max_speed_mi         = parseFloat(entry.max_speed)*2.23694;
+				act.elevation_gain_m     = parseFloat(entry.total_elevation_gain);
+				act.elevation_gain_ft    = parseFloat(entry.total_elevation_gain)*3.28084;
+				act.average_temp_c       = parseFloat(entry.average_temp);
+				act.average_temp_f       = parseFloat(entry.average_temp)*(9/5)+32;
+				act.suffer_score         = parseInt(entry.suffer_score);
+
+				if(entry.has_heartrate){
+					act.average_heartrate    = parseFloat(entry.average_heartrate);
+					act.max_heartrate        = parseInt(entry.max_heartrate);
+				}
+
+				// Cycling information
+				if(entry.type.indexOf('Ride')){
+					act.average_cadance      = parseFloat(entry.average_cadence);
+					act.average_watts        = parseFloat(entry.average_watts);
+					act.max_watts            = parseFloat(entry.max_watts);
+					act.weighted_avg_watts   = parseFloat(entry.weighted_average_watts);
+				}
+
+				act.moving_time.setDateNumericValue(parseFloat(entry.moving_time)*1000);
+				act.elapsed_time.setDateNumericValue(parseFloat(entry.elapsed_time)*1000);
+				act.update();
+			}
+			else {
+				details = this.getActivity(entry.id);
+				act = new GlideRecord('x_26578_ifttt_strava_activity');
+				act.initialize();
+				act.correlation_id       = entry.id;
+				act.name                 = entry.name;
+				act.activity_date        = startGDT;
+				act.athlete              = athlete;
+				act.type                 = entry.type;
+				act.distance_km          = parseFloat(entry.distance)/1000;
+				act.distance_mi          = (parseFloat(entry.distance)/1000)*0.621371;
+				act.average_speed_km     = parseFloat(entry.average_speed)*3.6;
+				act.average_speed_mi     = parseFloat(entry.average_speed)*2.23694;
+				act.max_speed_km         = parseFloat(entry.max_speed)*3.6;
+				act.max_speed_mi         = parseFloat(entry.max_speed)*2.23694;
+				act.elevation_gain_m     = parseFloat(entry.total_elevation_gain);
+				act.elevation_gain_ft    = parseFloat(entry.total_elevation_gain)*3.28084;
+				act.calories             = parseFloat(details.calories);
+				act.average_temp_c       = parseFloat(entry.average_temp);
+				act.average_temp_f       = parseFloat(entry.average_temp)*(9/5)+32;
+				act.suffer_score         = parseInt(entry.suffer_score);
+
+				if(entry.has_heartrate){
+					act.average_heartrate    = parseFloat(entry.average_heartrate);
+					act.max_heartrate        = parseInt(entry.max_heartrate);
+				}
+
+				// Cycling information
+				if(entry.type.indexOf('Ride')){
+					act.average_cadance      = parseFloat(entry.average_cadence);
+					act.average_watts        = parseFloat(entry.average_watts);
+					act.max_watts            = parseFloat(entry.max_watts);
+					act.weighted_avg_watts   = parseFloat(entry.weighted_average_watts);
+				}
+
+				act.moving_time.setDateNumericValue(parseFloat(entry.moving_time)*1000);
+				act.elapsed_time.setDateNumericValue(parseFloat(entry.elapsed_time)*1000);
+				act.insert();
+			}
+		}
+
+		return obj.length;
+	},
+
+	_clearStaging: function(){
+		// Compare existing activities to strava activities
+		var deleteCount = 0;
+		var gr = new GlideRecord('x_26578_ifttt_strava_activity');
+		gr.query();
+		while(gr.next()){
+			var act = new GlideRecord('x_26578_ifttt_strava_staging');
+			act.addQuery('correlation_id',gr.correlation_id);
+			act.query();
+			if(act.next()){
+				// Record Exists, delete staging
+				act.deleteRecord();
+			}else{
+				gs.info("NO MATCH FOUND");
+				deleteCount++;
+				// No match found, delete both records
+				gr.deleteRecord();
+				act.deleteRecord();
+			}
+		}
+		gs.info(deleteCount+" were deleted from Strava");
+
+	},
+
+	type: 'stravaUtil'
+};
+
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>madeleonardis</sys_created_by>
+        <sys_created_on>2018-01-10 18:23:40</sys_created_on>
+        <sys_id>0d1c1e024f2b43008928a7d18110c7a6</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>stravaUtil</sys_name>
+        <sys_package display_value="IFTTT" source="x_26578_ifttt">f060168a4fe743008928a7d18110c77f</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IFTTT">f060168a4fe743008928a7d18110c77f</sys_scope>
+        <sys_update_name>sys_script_include_0d1c1e024f2b43008928a7d18110c7a6</sys_update_name>
+        <sys_updated_by>madeleonardis</sys_updated_by>
+        <sys_updated_on>2018-01-10 21:52:43</sys_updated_on>
+    </sys_script_include>
+</record_update>

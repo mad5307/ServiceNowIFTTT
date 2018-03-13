@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>IFTTT - Button Press</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	// implement resource here
+	var data = request.body.data;
+	var event = data.event;
+
+	// Location Definitions
+	var work = '38.8545679600989,-77.0481058300177';
+	var currentLoc = data.location;
+	var dist = 1000;
+	var gu = new googleUtil();
+	dist = gu.distance(currentLoc,work);
+	gs.info(data.location+" is how far away you are from work");
+
+	if(dist <= 200){
+		var wu = new webhookUtil();
+		
+		// call(resource,event)
+		// Send a text message with event name
+		var whResp = wu.call('At Work','at_work');
+		
+		gs.info("At work");
+	}
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_26578_ifttt/ifttt_inbound_api/button_pressed</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/button_pressed</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>madeleonardis</sys_created_by>
+        <sys_created_on>2018-01-16 16:48:31</sys_created_on>
+        <sys_id>a86f7cc44f7303008928a7d18110c7c0</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>IFTTT - Button Press</sys_name>
+        <sys_package display_value="IFTTT" source="x_26578_ifttt">f060168a4fe743008928a7d18110c77f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IFTTT">f060168a4fe743008928a7d18110c77f</sys_scope>
+        <sys_update_name>sys_ws_operation_a86f7cc44f7303008928a7d18110c7c0</sys_update_name>
+        <sys_updated_by>madeleonardis</sys_updated_by>
+        <sys_updated_on>2018-01-16 20:13:12</sys_updated_on>
+        <web_service_definition display_value="IFTTT Inbound API">bbbcd2424f2b43008928a7d18110c754</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

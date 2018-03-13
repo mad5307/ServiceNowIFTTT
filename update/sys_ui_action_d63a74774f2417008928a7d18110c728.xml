@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>get_details</action_name>
+        <active>true</active>
+        <client>false</client>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>false</form_button>
+        <form_context_menu>false</form_context_menu>
+        <form_link>true</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>true</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>true</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Get Activity Details</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[try {
+	var r = new sn_ws.RESTMessageV2('x_26578_ifttt.Strava API', 'Get Activity');
+	r.setStringParameterNoEscape('activity_id', current.correlation_id);
+	
+	var response = r.execute();
+	var responseBody = response.getBody();
+	var httpStatus = response.getStatusCode();
+	var respObj = JSON.parse(responseBody);
+	
+	gs.info("Name of the activity fetched is : "+respObj.name.toString());
+	
+	current.average_cadance = respObj.average_cadence.toString();
+	if(respObj.has_heartrate == true)
+		current.average_heartrate = respObj.average_heartrate.toString();
+	current.average_speed_km = respObj.average_speed.toString();
+	current.average_temp_c = respObj.average_temp.toString();
+	current.average_watts = respObj.average_watts.toString();
+	current.calories = respObj.calories.toString();
+	current.distance_km = respObj.distance/1000;
+	current.elapsed_time = respObj.elapsed_time.toString();
+	current.elevation_gain_m = respObj.total_elevation_gain.toString();
+	current.max_speed_km = respObj.max_speed.toString();
+	current.max_watts = respObj.max_watts.toString();
+	current.moving_time = respObj.moving_time.toString();
+	current.name = respObj.name.toString();
+	current.suffer_score = respObj.suffer_score.toString();
+	current.weighted_avg_watts = respObj.weighted_average_watts.toString();
+	current.autoSysFields(false);
+	current.update();
+	gs.info("Completed fetching details for : "+respObj.name.toString());
+	action.setRedirectURL(current);
+}
+catch(ex) {
+	var message = ex.getMessage();
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>madeleonardis</sys_created_by>
+        <sys_created_on>2018-03-06 14:50:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d63a74774f2417008928a7d18110c728</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Get Activity Details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IFTTT" source="x_26578_ifttt">f060168a4fe743008928a7d18110c77f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IFTTT">f060168a4fe743008928a7d18110c77f</sys_scope>
+        <sys_update_name>sys_ui_action_d63a74774f2417008928a7d18110c728</sys_update_name>
+        <sys_updated_by>madeleonardis</sys_updated_by>
+        <sys_updated_on>2018-03-06 15:41:22</sys_updated_on>
+        <table>x_26578_ifttt_strava_activity</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

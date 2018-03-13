@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_rest_message">
+    <sys_rest_message action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <authentication_type>oauth2</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description/>
+        <name>Strava API</name>
+        <oauth2_profile display_value="Strava Default">5368b87d4feb03008928a7d18110c78f</oauth2_profile>
+        <protocol_name/>
+        <rest_endpoint>https://www.strava.com/api</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>madeleonardis</sys_created_by>
+        <sys_created_on>2018-01-10 18:31:39</sys_created_on>
+        <sys_id>82cd1e424f2b43008928a7d18110c7ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Strava API</sys_name>
+        <sys_package display_value="IFTTT" source="x_26578_ifttt">f060168a4fe743008928a7d18110c77f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IFTTT">f060168a4fe743008928a7d18110c77f</sys_scope>
+        <sys_update_name>sys_rest_message_82cd1e424f2b43008928a7d18110c7ae</sys_update_name>
+        <sys_updated_by>madeleonardis</sys_updated_by>
+        <sys_updated_on>2018-01-10 18:31:39</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+</record_update>

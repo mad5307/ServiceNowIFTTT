@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Strava Activities" max_length="40" name="x_26578_ifttt_strava_activity" type="collection">
+        <element label="Activity date" max_length="40" name="activity_date" type="glide_date_time"/>
+        <element label="Athlete" max_length="32" name="athlete" reference="x_26578_ifttt_strava_athlete" type="reference"/>
+        <element attributes="scale=0" label="Average cadence" max_length="40" name="average_cadance" type="float"/>
+        <element attributes="scale=2" label="Average heart rate" max_length="40" name="average_heartrate" type="float"/>
+        <element attributes="scale=2" label="Average speed (kph)" max_length="40" name="average_speed_km" type="float"/>
+        <element attributes="scale=2" label="Average speed (mph)" max_length="40" name="average_speed_mi" type="float"/>
+        <element attributes="scale=2" label="Average temp (C)" max_length="40" name="average_temp_c" type="float"/>
+        <element attributes="scale=2" label="Average temp (F)" max_length="40" name="average_tem_f" type="float"/>
+        <element attributes="scale=2" label="Average watts" max_length="40" name="average_watts" type="float"/>
+        <element attributes="scale=2" label="Calories" max_length="40" name="calories" type="float"/>
+        <element label="Correlation ID" max_length="40" name="correlation_id" type="string"/>
+        <element attributes="scale=2" label="Distance (km)" max_length="40" name="distance_km" type="float"/>
+        <element attributes="scale=2" label="Distance (mi)" max_length="40" name="distance_mi" type="float"/>
+        <element label="Total time" max_length="40" name="elapsed_time" type="glide_duration"/>
+        <element attributes="scale=0" label="Elevation gain (ft)" max_length="40" name="elevation_gain_ft" type="float"/>
+        <element attributes="scale=2" label="Elevation gain (m)" max_length="40" name="elevation_gain_m" type="float"/>
+        <element attributes="scale=2" label="Max heart rate" max_length="40" name="max_heartrate" type="float"/>
+        <element attributes="scale=2" label="Max speed (kph)" max_length="40" name="max_speed_km" type="float"/>
+        <element attributes="scale=2" label="Max speed (mph)" max_length="40" name="max_speed_mi" type="float"/>
+        <element attributes="scale=2" label="Max watts" max_length="40" name="max_watts" type="float"/>
+        <element label="Moving time" max_length="40" name="moving_time" type="glide_duration"/>
+        <element display="true" label="Name" max_length="100" name="name" type="string"/>
+        <element label="Suffer score" max_length="40" name="suffer_score" type="integer"/>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element label="Cycling" value="Ride"/>
+                <element label="Hike" value="Hike"/>
+                <element label="Rowing" value="Rowing"/>
+                <element label="Run" value="Run"/>
+                <element label="Skiing" value="AlpineSki"/>
+                <element label="Walk" value="Walk"/>
+                <element label="Weight Training" value="WeightTraining"/>
+                <element label="Workout" value="Workout"/>
+                <element label="Zwift" value="VirtualRide"/>
+            </choice>
+        </element>
+        <element choice="3" default="ft" label="Units" max_length="40" name="unit" type="choice">
+            <choice>
+                <element label="Feet (ft)" sequence="10" value="ft"/>
+                <element label="Meters (m)" sequence="20" value="m"/>
+            </choice>
+        </element>
+        <element attributes="scale=2" label="Weighted watts" max_length="40" name="weighted_avg_watts" type="float"/>
+        <index name="index">
+            <element name="athlete"/>
+        </index>
+    </element>
+</database>

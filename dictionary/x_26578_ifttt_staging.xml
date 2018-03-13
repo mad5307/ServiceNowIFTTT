@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Staging" max_length="40" name="x_26578_ifttt_staging" type="collection">
+        <element label="Correlation ID" max_length="40" name="correlation_id" type="string"/>
+        <element label="Data" max_length="1000000" name="data" type="string"/>
+        <element label="Service" max_length="32" name="ifttt_service" reference="x_26578_ifttt_services" type="reference"/>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <index name="index">
+            <element name="ifttt_service"/>
+        </index>
+    </element>
+</database>

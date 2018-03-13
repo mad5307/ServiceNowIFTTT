@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_rest_message_headers">
+    <sys_rest_message_headers action="INSERT_OR_UPDATE">
+        <name>Authorization</name>
+        <rest_message display_value="Strava API">82cd1e424f2b43008928a7d18110c7ae</rest_message>
+        <sys_class_name>sys_rest_message_headers</sys_class_name>
+        <sys_created_by>madeleonardis</sys_created_by>
+        <sys_created_on>2018-01-10 18:31:39</sys_created_on>
+        <sys_id>32cd56424f2b43008928a7d18110c733</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Authorization</sys_name>
+        <sys_package display_value="IFTTT" source="x_26578_ifttt">f060168a4fe743008928a7d18110c77f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IFTTT">f060168a4fe743008928a7d18110c77f</sys_scope>
+        <sys_update_name>sys_rest_message_headers_32cd56424f2b43008928a7d18110c733</sys_update_name>
+        <sys_updated_by>madeleonardis</sys_updated_by>
+        <sys_updated_on>2018-01-10 18:31:39</sys_updated_on>
+        <value>Bearer 28a9b9edda57dfd767e067471f0faac475fd8448</value>
+    </sys_rest_message_headers>
+</record_update>
